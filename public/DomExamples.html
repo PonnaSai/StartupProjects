@@ -1,0 +1,45 @@
+<html ng-app="sampleModule">
+    <head>
+
+ <script src="../node_modules/angular/angular.js"></script>
+         <script src="../node_modules/angular-route/angular-route.js"></script>
+         <script src="../node_modules/angular-messages/angular-messages.js"></script>
+         <link rel="stylesheet" href="./Style.css">
+         <script src = "SampleRouting.js"></script>
+         <base href="/">
+    </head>
+    <body>
+        
+<div>
+            <table>
+                <tr>
+                   <td> <input type ="checkbox" ng-model="DisabaleButton">Check the box to Disable me</td>
+                   <td><button ng-disabled="DisabaleButton">Click</button></td>
+                    </tr>
+                     <tr>
+                   <td> <input type ="checkbox" ng-model="showButton">Check the box to Disable me</td>
+                   <td><button ng-show="showButton">Click</button></td>
+                    </tr>
+                     <tr>
+                   <td> <input type ="checkbox" ng-model="hideButton">Check the box to Disable me</td>
+                   <td><button ng-hide="hideButton">Click</button></td>
+                    </tr>
+                     <tr>
+                   <td> <input type ="checkbox" ng-model="DisabaleButton">Check the box to Disable me</td>
+                   <td><button ng-disabled="DisabaleButton">Click</button></td>
+                    </tr>
+            </table>
+</div></br></br>
+           
+     <div ng-controller="HttpController">
+                <table>
+                    <tr>
+                        <td>
+                            {{Mymessage}}
+                        </td>
+                        </tr>
+                    </table>
+            </div>
+    </body>
+
+    </html>

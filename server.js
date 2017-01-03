@@ -6,7 +6,7 @@ app.use(express.static(__dirname + '/public'));
 
 // redirect all others to the index (HTML5 history)
 app.all('/*', function(req, res) {
-    res.sendFile(__dirname + '/public/SampleRoute.html');
+    res.sendFile(__dirname + '/public/DomExamples.html');
 });
 
 app.listen(3000, function() {

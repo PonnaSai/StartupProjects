@@ -13,9 +13,18 @@ app.controller("SampleControl",function($scope)
 {
     $scope.clicked = function(){
         window.location="/about.html";
+         $scope.message = "Hello I am About Page"
     }
+   
 });
+app.controller("HttpController", function($scope,$http)
+{
+    $http.get("Data.txt")
+    .then (function(response){
+        $scope.Mymessage = response.data;
 
+    });
+});
 
 
 
