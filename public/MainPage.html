@@ -1,0 +1,32 @@
+
+<html ng-app="PageNavigation">
+     <head>
+         <script src="../node_modules/angular/angular.js"></script>
+         <script src="../node_modules/angular-route/angular-route.js"></script>
+         <script src = "Pagerouting.js"></script>
+         <base href="/">
+    </head>
+     <body>    
+    
+    
+        <div>    
+            <div >    
+                <a  href="/">    
+                    Angular Routing Example    
+                </a>    
+            </div>    
+    
+            <ul>    
+                <li><a href="/">Home</a></li>    
+                <li><a href="/about">About</a></li>    
+                <li><a href="/contact">Contact</a></li>    
+            </ul>    
+        </div>    
+     
+    
+   <div>   
+        <!-- angular templating : This is where content will be injected -->    
+       <div ng-view></div>    
+    </div>  
+</body>    
+</html>

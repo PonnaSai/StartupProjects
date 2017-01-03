@@ -1,0 +1,26 @@
+<html>
+    <head>
+         <script src="../node_modules/angular/angular.js"></script>
+         <script src="../node_modules/angular-route/angular-route.js"></script>
+         <script src="../node_modules/angular-messages/angular-messages.js"></script>
+         <link rel="stylesheet" href="./Style.css">
+         <script src = "SampleRouting.js"></script>
+         <base href="/">
+     </head>
+    <body ng-app="sampleModule"> 
+         <form class="pure-form pure-form-aligned" name="frm" method="post" novalidate autocomplete="off">
+     <div ng-controller="SampleControl">
+         
+       <label>User Name</lable>
+        <input name="username" ng-model="user.username" type="text" placeholder="Username">
+                   <div class="field-message" ng-messages="frm.username.$error" ng-if='frm.username.$dirty' ng-cloak>
+                    <div ng-message="required">Username is required</div>
+                  </div></br></br>
+                <div class ="form-actions">
+                   <button type="submit"  ng-click = "clicked()"
+                   ng-disabled="frm.$invalid ">Submit</button>
+                </div>
+       </div>
+       </form>
+     </body>
+    </html>
