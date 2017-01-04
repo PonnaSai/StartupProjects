@@ -27,4 +27,14 @@ app.controller("HttpController", function($scope,$http)
 });
 
 
-
+app.controller("HttpCntrl1",function($scope,$http)
+{
+ $http({
+        method : "GET",
+        url : "Home.html"
+    }).then(function mySucces(response) {
+        $scope.myWelcome = response.data;
+    }, function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+});
