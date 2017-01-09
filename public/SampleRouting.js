@@ -17,7 +17,7 @@ app.controller("SampleControl",function($scope)
     }
    
 });
-app.controller("HttpController", function($scope,$http)
+app.controller("HttpController", function($scope,$http, $log)
 {
     $http.get("Data.txt")
     .then (function(response){
@@ -31,10 +31,12 @@ app.controller("HttpCntrl1",function($scope,$http)
 {
  $http({
         method : "GET",
-        url : "Home.html"
-    }).then(function mySucces(response) {
-        $scope.myWelcome = response.data;
-    }, function myError(response) {
+        url : "http://localhost:62175/EmpService.asmx/GetAllEmployees"
+    }).then(function (response) {
+       $scope.myWelcome=response.data;
+       $log.info(response)
+    }, function (response) {
         $scope.myWelcome = response.statusText;
     });
 });
+
