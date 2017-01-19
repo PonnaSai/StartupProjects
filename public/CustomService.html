@@ -1,0 +1,28 @@
+<html ng-app="sampleModule">
+    <head>
+
+ <script src="../node_modules/angular/angular.js"></script>
+         <script src="../node_modules/angular-route/angular-route.js"></script>
+         <script src="../node_modules/angular-messages/angular-messages.js"></script>
+         <link rel="stylesheet" href="./Style.css">
+         <script src = "SampleRouting.js"></script>
+         <script src ="ServiceString.js"></script>
+         <base href="/">
+    </head>
+    <body>
+<div ng-controller="MyCustCntl">
+    <table>
+        <tr>
+            <td>Your String</td>
+            <td><input type ="text" ng-model="input"></td>
+            </tr>
+            <tr>
+                <td>Result String</td>
+            <td><input type ="text" ng-model="output"></td>
+                </tr>
+                <td>Your String</td>
+            <td><input type ="button" ng-click="transformString(input)" value="Process String"></td>
+        </table>
+    </div>
+        </body>
+        </html>
