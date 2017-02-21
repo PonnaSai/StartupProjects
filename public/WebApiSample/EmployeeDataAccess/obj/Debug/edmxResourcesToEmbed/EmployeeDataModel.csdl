@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestingDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TestingDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tblEmployees" EntityType="TestingDBModel.tblEmployee" />
+    <EntitySet Name="Users" EntityType="TestingDBModel.User" />
+  </EntityContainer>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Salary" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserName" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserPwd" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

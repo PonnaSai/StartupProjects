@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var ulEmployees = $('#ulEmployees');
+            $('#Btn').click(function () {
+                var username = $('#txtuserName').val();
+                var password = $('#txtuserPwd').val();
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:49722/api/Employee',
+                    dataType: 'json',
+                    headers: {
+                        'Authorization': 'Basic ' + btoa(username + ':' + password)
+                    },
+                    success: function (data) {
+                        ulEmployees.empty();
+                        $.each(data, function (index, val) {
+                            var name = val.Name;
+                            ulEmployees.append('<li>' + name + '(' + val.Gender + ')' + '</li>');
+                        });
+                    },
+                    complete: function (jqXHR) {
+                        if (jqXHR.status == '401') {
+                            ulEmployees.empty();
+                            ulEmployees.append('<li>' + jqXHR.status + ':' + jqXHR.statusText + '</li>')
+                        }
+                    }
+
+                });
+            });
+
+            $('#Btn2').click(function () {
+                ulEmployees.empty();
+
+            });
+        });
+    </script>
+
+    <title></title>
+</head>
+<body>
+    <div>
+        Username : <input id ="txtuserName" type ="text" placeholder ="User Name" />
+        Password : <input id="txtuserPwd"  type="password" placeholder ="Password" />
+        <br /><br /><br />
+        <input id="Btn" type="button" value="Get All Records" />
+        <input id="Btn2" type="button" value="Clear" />
+        <ul id="ulEmployees"></ul>
+    </div>
+</body>
+</html>

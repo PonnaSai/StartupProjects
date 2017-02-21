@@ -1,0 +1,8 @@
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll.config
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.dll
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\bin\Debug\EmployeeDataAccess.pdb
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.dll
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.pdb
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\EmployeeDataAccess\obj\Debug\EmployeeDataAccess.csprojResolveAssemblyReference.cache

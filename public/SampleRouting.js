@@ -30,7 +30,7 @@ app.controller("HttpCntrl1", function ($scope, $http) {
         url: "http://localhost:62175/EmpService.asmx/GetAllEmployees"
     }).then(function (response) {
         $scope.myWelcome = response.data;
-        $log.info(response)
+        $log.info(response) 
     }, function (response) {
         $scope.myWelcome = response.statusText;
     });

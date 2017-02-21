@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestingDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TestingDBModelStoreContainer">
+    <EntitySet Name="tblEmployee" EntityType="TestingDBModel.Store.tblEmployee" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="TestingDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nchar" MaxLength="10" />
+    <Property Name="Salary" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" />
+    <Property Name="UserPwd" Type="varchar" MaxLength="20" />
+  </EntityType>
+</Schema>

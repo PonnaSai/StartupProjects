@@ -1,0 +1,5 @@
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\ClientApplication\bin\ClientApplication.dll
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\ClientApplication\bin\ClientApplication.pdb
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\ClientApplication\obj\Debug\ClientApplication.csprojResolveAssemblyReference.cache
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\ClientApplication\obj\Debug\ClientApplication.dll
+C:\Users\lc44297\Documents\Visual Studio 2012\Projects\WebApiSample\ClientApplication\obj\Debug\ClientApplication.pdb

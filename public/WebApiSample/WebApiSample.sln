@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSample", "WebApiSample\WebApiSample.csproj", "{FBEF192A-E277-413B-A568-E274833B3821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDataAccess", "EmployeeDataAccess\EmployeeDataAccess.csproj", "{320992A9-540D-40C1-8B12-E9DEE48DA772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApplication1", "ClientApplication1\ClientApplication1.csproj", "{994C2635-FD32-41EB-BF28-9BE8CC3AADBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBEF192A-E277-413B-A568-E274833B3821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBEF192A-E277-413B-A568-E274833B3821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBEF192A-E277-413B-A568-E274833B3821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBEF192A-E277-413B-A568-E274833B3821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320992A9-540D-40C1-8B12-E9DEE48DA772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320992A9-540D-40C1-8B12-E9DEE48DA772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320992A9-540D-40C1-8B12-E9DEE48DA772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320992A9-540D-40C1-8B12-E9DEE48DA772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{994C2635-FD32-41EB-BF28-9BE8CC3AADBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{994C2635-FD32-41EB-BF28-9BE8CC3AADBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{994C2635-FD32-41EB-BF28-9BE8CC3AADBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{994C2635-FD32-41EB-BF28-9BE8CC3AADBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
