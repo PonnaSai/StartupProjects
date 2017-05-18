@@ -1,0 +1,6 @@
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\MSMQExample\MSMQExample\bin\Debug\MSMQExample.exe.config
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\MSMQExample\MSMQExample\bin\Debug\MSMQExample.exe
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\MSMQExample\MSMQExample\bin\Debug\MSMQExample.pdb
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\MSMQExample\MSMQExample\obj\Debug\MSMQExample.csprojResolveAssemblyReference.cache
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\MSMQExample\MSMQExample\obj\Debug\MSMQExample.exe
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\MSMQExample\MSMQExample\obj\Debug\MSMQExample.pdb
