@@ -1,5 +1,5 @@
 {
-  "name": "startup-projects",
+  "name": "typescript",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/PonnaSai/StartupProjects.git"
   },
-  "author": "",
+  "author": "sai",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PonnaSai/StartupProjects/issues"

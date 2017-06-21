@@ -1,65 +1,72 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MSMQExample
 {
     class Program
     {
-       
-        static void Main(string[] args)
-        {
-            const string queueName = @".\private$\TestQueue";
-            SendMessageToQueue(queueName);
 
-            
-        }
-        public static void SendMessageToQueue( string queueName)
-        {
-            MessageQueue msMq = null;
-            if(!MessageQueue.Exists(queueName))
+            static void Main(string[] args)
             {
-                MessageQueue.Create(queueName);
-            }
-            else
-            {
-                msMq = new MessageQueue(queueName);
-            }
+                const string queueName = @".\private$\TestQueue";
+                SendMessageToQueue(queueName);
 
-            try
+
+            }
+            public static void SendMessageToQueue( string queueName)
             {
-                QueueNames qn = new QueueNames()
+                MessageQueue msMq = null;
+                if(!MessageQueue.Exists(queueName))
                 {
-                    firstName = "Sai",
-                    lastName = "Prakash"
-                };
-                msMq.Send(qn);
-            }
-            catch (MessageQueueException ee)
-            {
-                Console.Write(ee.ToString());
-            }
-            catch (Exception eee)
-            {
-                Console.WriteLine(eee.ToString());
+                    MessageQueue.Create(queueName);
+                }
+                else
+                {
+                    msMq = new MessageQueue(queueName);
+                }
+
+                try
+                {
+                    QueueNames qn = new QueueNames()
+                    {
+                        firstName = "Sai",
+                        lastName = "Prakash"
+                    };
+                    msMq.Send(qn);
+                }
+                catch (MessageQueueException ee)
+                {
+                    Console.Write(ee.ToString());
+                }
+                catch (Exception eee)
+                {
+                    Console.WriteLine(eee.ToString());
+                }
+
+                finally
+                {
+                    msMq.Close();
+                }
+                Console.WriteLine("Message sent......");
             }
 
-            finally
-            {
-                msMq.Close();
-            }
-            Console.WriteLine("Message sent......");
         }
 
-    }
+        public class QueueNames
+        {
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+        }
 
-    public class QueueNames
-    {
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-    }
 
+        
+
+
+    }
 }

@@ -1,0 +1,6 @@
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\SamSample\SamSample\bin\Debug\SamSample.exe.config
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\SamSample\SamSample\bin\Debug\SamSample.exe
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\SamSample\SamSample\bin\Debug\SamSample.pdb
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\SamSample\SamSample\obj\Debug\SamSample.csprojResolveAssemblyReference.cache
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\SamSample\SamSample\obj\Debug\SamSample.exe
+C:\Users\lc44297\source\repos\StartupProjects\Projects\MSMQExample\SamSample\SamSample\obj\Debug\SamSample.pdb

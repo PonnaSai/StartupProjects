@@ -2,86 +2,82 @@
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install',
-1 verbose cli   'angular-idle-service',
+1 verbose cli   'typescript',
 1 verbose cli   '--save' ]
 2 info using npm@3.10.8
 3 info using node@v6.9.1
 4 silly loadCurrentTree Starting
 5 silly install loadCurrentTree
 6 silly install readLocalPackageData
-7 silly fetchPackageMetaData angular-idle-service
-8 silly fetchNamedPackageData angular-idle-service
-9 silly mapToRegistry name angular-idle-service
+7 silly fetchPackageMetaData typescript
+8 silly fetchNamedPackageData typescript
+9 silly mapToRegistry name typescript
 10 silly mapToRegistry using default registry
 11 silly mapToRegistry registry https://registry.npmjs.org/
 12 silly mapToRegistry data Result {
-12 silly mapToRegistry   raw: 'angular-idle-service',
+12 silly mapToRegistry   raw: 'typescript',
 12 silly mapToRegistry   scope: null,
-12 silly mapToRegistry   escapedName: 'angular-idle-service',
-12 silly mapToRegistry   name: 'angular-idle-service',
+12 silly mapToRegistry   escapedName: 'typescript',
+12 silly mapToRegistry   name: 'typescript',
 12 silly mapToRegistry   rawSpec: '',
 12 silly mapToRegistry   spec: 'latest',
 12 silly mapToRegistry   type: 'tag' }
-13 silly mapToRegistry uri https://registry.npmjs.org/angular-idle-service
-14 verbose request uri https://registry.npmjs.org/angular-idle-service
+13 silly mapToRegistry uri https://registry.npmjs.org/typescript
+14 verbose request uri https://registry.npmjs.org/typescript
 15 verbose request no auth needed
-16 info attempt registry request try #1 at 10:40:56 AM
-17 verbose request id eb0f8c8981a4adcd
-18 http request GET https://registry.npmjs.org/angular-idle-service
-19 info retry will retry, error on last attempt: Error: tunneling socket could not be established, statusCode=407
-20 info attempt registry request try #2 at 10:41:07 AM
-21 http request GET https://registry.npmjs.org/angular-idle-service
-22 info retry will retry, error on last attempt: Error: tunneling socket could not be established, statusCode=407
-23 info attempt registry request try #3 at 10:42:07 AM
-24 http request GET https://registry.npmjs.org/angular-idle-service
-25 silly fetchPackageMetaData Error: tunneling socket could not be established, statusCode=407
-25 silly fetchPackageMetaData     at ClientRequest.onConnect (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:165:19)
-25 silly fetchPackageMetaData     at ClientRequest.g (events.js:291:16)
-25 silly fetchPackageMetaData     at emitThree (events.js:116:13)
-25 silly fetchPackageMetaData     at ClientRequest.emit (events.js:194:7)
-25 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:395:11)
-25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
-25 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
-25 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:176:18)
-25 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:134:10)
-25 silly fetchPackageMetaData     at TCP.onread (net.js:548:20)
-25 silly fetchPackageMetaData  error for angular-idle-service { Error: tunneling socket could not be established, statusCode=407
-25 silly fetchPackageMetaData     at ClientRequest.onConnect (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:165:19)
-25 silly fetchPackageMetaData     at ClientRequest.g (events.js:291:16)
-25 silly fetchPackageMetaData     at emitThree (events.js:116:13)
-25 silly fetchPackageMetaData     at ClientRequest.emit (events.js:194:7)
-25 silly fetchPackageMetaData     at Socket.socketOnData (_http_client.js:395:11)
-25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
-25 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
-25 silly fetchPackageMetaData     at readableAddChunk (_stream_readable.js:176:18)
-25 silly fetchPackageMetaData     at Socket.Readable.push (_stream_readable.js:134:10)
-25 silly fetchPackageMetaData     at TCP.onread (net.js:548:20) code: 'ECONNRESET' }
-26 silly rollbackFailedOptional Starting
-27 silly rollbackFailedOptional Finishing
-28 silly runTopLevelLifecycles Finishing
-29 silly install printInstalled
-30 verbose stack Error: tunneling socket could not be established, statusCode=407
-30 verbose stack     at ClientRequest.onConnect (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:165:19)
-30 verbose stack     at ClientRequest.g (events.js:291:16)
-30 verbose stack     at emitThree (events.js:116:13)
-30 verbose stack     at ClientRequest.emit (events.js:194:7)
-30 verbose stack     at Socket.socketOnData (_http_client.js:395:11)
-30 verbose stack     at emitOne (events.js:96:13)
-30 verbose stack     at Socket.emit (events.js:188:7)
-30 verbose stack     at readableAddChunk (_stream_readable.js:176:18)
-30 verbose stack     at Socket.Readable.push (_stream_readable.js:134:10)
-30 verbose stack     at TCP.onread (net.js:548:20)
-31 verbose cwd C:\Users\lc44297\source\repos\StartupProjects
-32 error Windows_NT 6.1.7601
-33 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular-idle-service" "--save"
-34 error node v6.9.1
-35 error npm  v3.10.8
-36 error code ECONNRESET
-37 error network tunneling socket could not be established, statusCode=407
-38 error network This is most likely not a problem with npm itself
-38 error network and is related to network connectivity.
-38 error network In most cases you are behind a proxy or have bad network settings.
-38 error network
-38 error network If you are behind a proxy, please make sure that the
-38 error network 'proxy' config is set properly.  See: 'npm help config'
-39 verbose exit [ 1, true ]
+16 info attempt registry request try #1 at 10:51:19 AM
+17 verbose request id 96697f87c5ef8031
+18 verbose etag W/"58884fc9-13852b"
+19 verbose lastModified Wed, 25 Jan 2017 07:12:09 GMT
+20 http request GET https://registry.npmjs.org/typescript
+21 info retry will retry, error on last attempt: Error: tunneling socket could not be established, statusCode=407
+22 info attempt registry request try #2 at 10:51:29 AM
+23 verbose etag W/"58884fc9-13852b"
+24 verbose lastModified Wed, 25 Jan 2017 07:12:09 GMT
+25 http request GET https://registry.npmjs.org/typescript
+26 info retry will retry, error on last attempt: Error: tunneling socket could not be established, statusCode=407
+27 info attempt registry request try #3 at 10:52:29 AM
+28 verbose etag W/"58884fc9-13852b"
+29 verbose lastModified Wed, 25 Jan 2017 07:12:09 GMT
+30 http request GET https://registry.npmjs.org/typescript
+31 silly get cb [ 304, undefined ]
+32 verbose etag https://registry.npmjs.org/typescript from cache
+33 verbose get saving typescript to C:\Users\lc44297\AppData\Roaming\npm-cache\registry.npmjs.org\typescript\.cache.json
+34 verbose correctMkdir C:\Users\lc44297\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+35 silly install normalizeTree
+36 silly loadCurrentTree Finishing
+37 silly loadIdealTree Starting
+38 silly install loadIdealTree
+39 silly cloneCurrentTree Starting
+40 silly install cloneCurrentTreeToIdealTree
+41 silly cloneCurrentTree Finishing
+42 silly loadShrinkwrap Starting
+43 silly install loadShrinkwrap
+44 silly loadShrinkwrap Finishing
+45 silly loadAllDepsIntoIdealTree Starting
+46 silly install loadAllDepsIntoIdealTree
+47 silly rollbackFailedOptional Starting
+48 silly rollbackFailedOptional Finishing
+49 silly runTopLevelLifecycles Finishing
+50 silly install printInstalled
+51 verbose stack Error: Refusing to install typescript as a dependency of itself
+51 verbose stack     at checkSelf (C:\Program Files\nodejs\node_modules\npm\lib\install\validate-args.js:53:14)
+51 verbose stack     at Array.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+51 verbose stack     at LOOP (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+51 verbose stack     at chain (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+51 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install\validate-args.js:16:5
+51 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:52:35
+51 verbose stack     at Array.forEach (native)
+51 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:52:11
+51 verbose stack     at Array.forEach (native)
+51 verbose stack     at asyncMap (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:51:8)
+52 verbose cwd C:\Users\lc44297\source\repos\StartupProjects
+53 error Windows_NT 6.1.7601
+54 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "typescript" "--save"
+55 error node v6.9.1
+56 error npm  v3.10.8
+57 error code ENOSELF
+58 error Refusing to install typescript as a dependency of itself
+59 error If you need help, you may report this error at:
+59 error     <https://github.com/npm/npm/issues>
+60 verbose exit [ 1, true ]
