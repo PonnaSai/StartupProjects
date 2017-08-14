@@ -2,7 +2,8 @@
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install',
-1 verbose cli   'formidable' ]
+1 verbose cli   'formidable',
+1 verbose cli   '--save' ]
 2 info using npm@3.10.8
 3 info using node@v6.9.1
 4 silly loadCurrentTree Starting
@@ -24,14 +25,14 @@
 13 silly mapToRegistry uri https://registry.npmjs.org/formidable
 14 verbose request uri https://registry.npmjs.org/formidable
 15 verbose request no auth needed
-16 info attempt registry request try #1 at 4:01:40 PM
-17 verbose request id 513e0cbcf44a916a
+16 info attempt registry request try #1 at 3:18:55 PM
+17 verbose request id c139d015abfff071
 18 http request GET https://registry.npmjs.org/formidable
 19 info retry will retry, error on last attempt: Error: tunneling socket could not be established, statusCode=407
-20 info attempt registry request try #2 at 4:01:50 PM
+20 info attempt registry request try #2 at 3:19:05 PM
 21 http request GET https://registry.npmjs.org/formidable
 22 info retry will retry, error on last attempt: Error: tunneling socket could not be established, statusCode=407
-23 info attempt registry request try #3 at 4:02:50 PM
+23 info attempt registry request try #3 at 3:20:05 PM
 24 http request GET https://registry.npmjs.org/formidable
 25 silly fetchPackageMetaData Error: tunneling socket could not be established, statusCode=407
 25 silly fetchPackageMetaData     at ClientRequest.onConnect (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:165:19)
@@ -70,9 +71,9 @@
 30 verbose stack     at readableAddChunk (_stream_readable.js:176:18)
 30 verbose stack     at Socket.Readable.push (_stream_readable.js:134:10)
 30 verbose stack     at TCP.onread (net.js:548:20)
-31 verbose cwd C:\Users\lc44297\source\repos\StartupProjects
+31 verbose cwd C:\Users\lc44297\source\repos\StartupProjects\public\Node
 32 error Windows_NT 6.1.7601
-33 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "formidable"
+33 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "formidable" "--save"
 34 error node v6.9.1
 35 error npm  v3.10.8
 36 error code ECONNRESET

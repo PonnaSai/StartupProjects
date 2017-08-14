@@ -29,3 +29,4 @@ superheros.push({
     supername: "Batman"
 });
 document.write(superheros[0].realname + " is " + superheros[0].supername + "<br/>");
+document.write(superheros[1].realname + "" + superheros[1].supername[1] + "<br/>");
