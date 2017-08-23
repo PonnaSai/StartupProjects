@@ -23,3 +23,15 @@ document.write("5 - 4 =" + (5 - 4));
 document.write("5 * 4 =" + (5 * 4));
 document.write("5 / 4 =" + (5 / 4));
 document.write("5 % 4 =" + (5 % 4));
+/// Let Example
+var samplet = 123;
+if (true) {
+    var samplet_1 = 456;
+}
+document.write("samplet :" + samplet + "<br />");
+///Comparing  let with Var
+var SecondSamplet = 789;
+if (true) {
+    var SecondSamplet = 100;
+}
+document.write("Samplet Test" + SecondSamplet + "<br />");
