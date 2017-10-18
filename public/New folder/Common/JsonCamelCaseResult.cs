@@ -17,7 +17,7 @@ namespace BalanceTransfer.Common
             JsonRequestBehavior = jsonRequestBehavior;
         }
 
-        public Encoding ContentEncoding { get; set; }
+        public Encoding ContentEncoding {  get; set; }
 
         public string ContentType { get; set; }
 
