@@ -18,7 +18,7 @@
                     <div ng-message="required">Username is required</div>
                   </div>
                 </div> 
-                <div class="pure-control-group">
+                <div class="pure-control-group" 
                   <label>Password</label>
                   <input name="password" ng-model="user.password" type="password" placeholder="Password" required ng-minlength="6" ng-maxlength="10">
                   <div class="field-message" ng-messages="frm.password.$error" ng-if='frm.password.$dirty' ng-cloak>

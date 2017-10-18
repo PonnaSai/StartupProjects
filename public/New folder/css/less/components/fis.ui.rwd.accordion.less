@@ -1,0 +1,81 @@
+
+.fis-rwd-accordion-panel-heading {
+	padding: @fis-rwd-accordion-padding;
+	background-color: @fis-rwd-accordion-panel-bg;
+	border-color: @fis-rwd-accordion-panel-border;
+}
+
+.fis-rwd-accordion-panel-title {
+	background-color: @fis-rwd-accordion-panel-bg;
+	cursor: pointer;
+}
+
+.fis-rwd-accordion-panel-body {
+	padding-left: 40px;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.fis-rwd-accordion-panel-title:before {
+	/* symbol for "opening" panels */
+	content: '\25BC';
+	float: left;
+	color: @fis-rwd-accordion-title-collapsed; /* adjust as needed */
+	padding-left: 5px;
+	padding-top: 2px;
+}
+
+.fis-rwd-accordion-panel-title.collapsed {
+	background-color: @fis-rwd-accordion-panel-bg;
+	cursor: pointer;
+}
+
+.fis-rwd-accordion-panel-title.collapsed:before {
+	/* symbol for "collapsed" panels */
+	content: '\25BA';
+	float: left;
+	color: @fis-rwd-accordion-title-collapsed;
+}
+
+.fis-rwd-accordion-toggle {
+	text-decoration: none !important;
+}
+
+.fis-rwd-accordion-header-highlighttxt {
+	font-weight: bold;
+	color: @fis-rwd-colour-primary; /* adjust as needed */
+}
+
+.fis-rwd-accordion-details-highlighttxt {
+	font-weight: bold;
+	color: @fis-rwd-colour-primary; /* adjust as needed */
+}
+
+.fis-rwd-accordion-header-txt {
+	font-weight: bold;
+	color: @fis-rwd-colour-primary; /* adjust as needed */
+}
+
+.fis-rwd-accordion-header-table td {
+	padding-left: @fis-rwd-accordion-padding;
+	line-height: 1.5;
+}
+
+.fis-rwd-accordion-content-table td {
+	padding-right: 20px;
+	line-height: 1.5;
+}
+
+.fis-rwd-accordion-content-label{
+	color: @fis-rwd-accordion-content-label;
+}
+
+.fis-rwd-accordion-content-text{
+	color: #333;
+}
+
+.fis-rwd-accordion-content-table th {
+	padding-right: 20px;
+	line-height: 1.5;
+}
