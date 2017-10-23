@@ -1,0 +1,1 @@
+(function(){var fisUiRwdStarterKit=angular.module("fisUiRwdStarterKit");var dummyfilter="dummyfilter";try{var tr=angular.module("pascalprecht.translate")}catch(err){dummyfilter="translate"}fisUiRwdStarterKit.filter(dummyfilter,function(){return function(input){return input}})})();

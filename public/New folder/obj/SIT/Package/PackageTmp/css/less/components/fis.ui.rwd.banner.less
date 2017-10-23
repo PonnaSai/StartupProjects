@@ -1,0 +1,150 @@
+.fis-rwd-banner {
+	width: 100%;
+	height: 48px;
+	background: @fis-rwd-banner-bg;
+	border-bottom: 1px solid @fis-rwd-banner-bottom-border;
+	box-shadow: 1px 1px 2px 2x @fis-rwd-banner-boxshadow;
+	padding: 10px 20px 10px 10px;
+}
+
+.fis-rwd-banner-content {
+	max-width: 1140px;
+	background-color: @fis-rwd-banner-bg;
+	margin: 0px auto;
+	padding: 0px 0px 0px 12px;
+}
+
+.fis-rwd-banner-group {
+	height: 28px;
+	float: left;
+}
+
+.fis-rwd-banner-image {
+	float: left;
+	padding: 0 10px 0 0;
+	background-image: @fis-rwd-banner-image;
+	background-repeat: no-repeat;
+	height: inherit;
+	width: 250px;
+}
+
+.fis-rwd-banner-product-name {
+	font-size: 23px;
+	color:  @fis-rwd-banner-prod-color;
+	padding: @fis-rwd-banner-content-padding;
+}
+
+.fis-rwd-banner-product-name-suffix {
+	font-size: 23px;
+	color:  @fis-rwd-banner-prod-suffix-color;
+}
+
+.fis-rwd-banner-product-name-border {
+    border-left: solid 1px @fis-rwd-banner-bottom-border;	
+}
+
+.fis-rwd-banner-navigation {
+	display: inline;
+	float: right;
+}
+
+.fis-rwd-banner-navigation > ul {
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+}
+
+.fis-rwd-banner-navigation > ul > li {
+	display: inline;
+}
+
+.fis-rwd-banner-navigation > ul > li > a, .fis-rwd-banner-navigation > ul > li > span > a {
+	font-size: @fis-rwd-banner-ul-li-a-font;
+	color: @fis-rwd-banner-ul-li-a-color;
+	padding: 5px;
+	margin-right: 7px;
+	margin-left: 7px;
+}
+.fis-rwd-banner-navigation > ul > li > span > a{
+	color:@fis-rwd-banner-username-color;
+}
+
+.fis-rwd-banner-list-item:after {
+	color: @fis-rwd-banner-list-after;
+	content: " | ";
+}
+
+.fis-rwd-banner-list-item-last {
+	font-weight: bold;
+}
+
+.fis-rwd-user > span > a:hover, .fis-rwd-user > span > a:focus{
+		text-decoration:none;
+	}
+
+@media ( min-width : @fis-rwd-screen-sm-min) {
+	.fis-rwd-banner li.fis-rwd-responsive-banner-item {
+		display: inline;
+	}
+}
+@media (max-width: @fis-rwd-screen-xs-max) {
+	/* min-width added to prevent the banner from wrapping - used when off-canvas is not displayed */
+	.fis-rwd-banner {
+		padding-left: 0px;
+		min-width: 425px;
+	}
+	
+	/* min-width added to prevent the banner from wrapping - used when off-canvas is displayed */
+	.fis-rwd-banner-adjust-min-width {
+		min-width: 625px;
+	}
+	
+	.fis-rwd-banner-content {
+		padding: 0px;
+	}
+	
+	.fis-rwd-banner li.fis-rwd-responsive-banner-item {
+		display: none;
+	}
+	
+	.fis-rwd-banner-image{
+		width:150px;
+	}
+	.fis-rwd-banner-navigation>ul{
+		margin:0;
+	}
+	.fis-rwd-banner-navigation > ul > li > span > a{
+		float:left;
+		margin: 0 12px;
+		padding:0;
+	}
+	
+}
+
+.fis-rwd-banner-navigation  select
+{
+	border:none;
+	font-size:14px;
+}
+/* set main side nav banner background color*/
+.fis-rwd-msnav-banner{
+	background-color:@fis-rwd-msnav-banner-background-color;
+}
+/* change the color of text as background is green , used only incase of mainside nav*/
+.fis-rwd-msnav-banner .fis-rwd-banner-navigation>ul>li>a{
+	color:@fis-rwd-banner-navigation-ul-li-a-color;
+}
+.fis-rwd-msnav-banner .fis-rwd-banner-navigation>ul>li>span>a, .fis-rwd-msnav-banner .fis-rwd-banner-navigation .fis-rwd-sm-user{
+	color:@fis-rwd-msnav-banner-user-color;
+}
+/* use white banner image for mainside nav*/
+.fis-rwd-msnav-banner-image{
+    background-image:@fis-rwd-msnav-banner-image; 
+}
+/* set the hamburger color for mainside nav*/
+.fis-rwd-msnav-banner .fis-rwd-navbar-toggle .icon-bar {
+    background-color: @fis-rwd-banner-hamburger-menu-color;
+}
+/* set the max-width value to align the banner logo to the left side and banner navigation to the right side*/
+.fis-rwd-msnav-banner .fis-rwd-banner-content{
+	max-width:none;
+}

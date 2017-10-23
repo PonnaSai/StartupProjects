@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="bTransfer" ng-cloak>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/webjars/bootstrap24/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font icon library  as provided from UX site - keep it upto  date before each release -->
+    <link href="~/font_icon/icon_font.css" rel="stylesheet">
+    <link href="~/css/fis.ui.rwd.combined-min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <!-- angular ui css -->
+    <link href="~/webjars/angular-ui-grid/3.0.0/ui-grid.min.css" rel="stylesheet"/>
+    <link href="~/css/loading-bar.min.css" rel="stylesheet"/>
+</head>
+<body class="fis-rwd-body" ng-class="checkSideNavOpenForBody()" fis-ui-rwd-document-click fis-ui-rwd-workspace-resize>
+    <div class="fis-rwd-container">
+        <fis-ui-rwd-banner banner="bannerData">
+            <fis-ui-rwd-user-dropdown-menu userinfo="userInfo"></fis-ui-rwd-user-dropdown-menu>
+        </fis-ui-rwd-banner>
+        <div class="container-fluid fis-rwd-workspace" ng-style="{'min-height': minWorkspaceHeight}" ng-class="checkSideNavOpenForWorkspace()">
+            @RenderBody()
+            <div style="color:white">Server : @ViewBag.Server</div>
+            <input type="text" style="visibility:hidden" ng-model="environment" value=@System.Configuration.ConfigurationManager.AppSettings.Get("Environment") />
+        </div>
+        
+        <fis-ui-rwd-footer footer=myFooter></fis-ui-rwd-footer>
+    </div>
+    <!--  ************************************************** -->
+    <!--  ****************  third-party ******************** -->
+    <!--  ************************************************** -->
+    <script src="~/webjars/momentjs/2.10.3/moment.js"></script>
+    <script src="~/webjars/underscore/1.8.3/underscore-min.js"></script>
+    <!-- jquery -->
+    <script src="~/scripts/jquery-3.1.0.min.js"></script>
+    <!-- angular -->
+    <script src="~/webjars/angularjs/1.4.8/angular.min.js"></script>
+    <script src="~/webjars/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="~/webjars/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="~/webjars/angularjs/1.4.8/angular-messages.min.js"></script>
+    <!-- angular loading bar-->
+    <script src="~/Scripts/loading-bar.min.js"></script>
+    <!-- angular ui router -->
+    <script src="~/webjars/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <!-- angular ui util -->
+    <script src="~/webjars/angular-ui-utils/0.2.2/ui-utils.min.js"></script>
+    <script src="~/webjars/angular-ui-bootstrap/1.1.0/dist/ui-bootstrap-tpls.js"></script>
+    <script src="~/webjars/angular-translate/2.7.2/angular-translate.min.js"></script>
+    <script src="~/webjars/angular-translate-loader-partial/2.7.0/angular-translate-loader-partial.min.js"></script>
+    <!-- Smart Table -->
+    <script src="~/webjars/angular-smart-table/2.1.6/dist/smart-table.min.js"></script>
+     <!-- angular ui grid -->
+    <script src="~/webjars/angular-ui-grid/3.0.0/ui-grid.min.js"></script>
+    <!-- Add locales -->
+    <script src="~/webjars/angular-dynamic-locale/0.1.27/tmhDynamicLocale.min.js"></script>
+    <script src="~/js/fis-rwd-framework.bundle.js"></script>
+    <!--  ************************************************** -->
+    <!--  *************  fis framework configurations  ******************* -->
+    <!--  ************************************************** -->
+    <script src="~/js/configs/fis.ui.rwd.configs.combined-min.js"></script>
+    <!--  ************************************************** -->
+    <!--  ****************  fis framework directives ********************* -->
+    <!--  ************************************************** -->
+    <script src="~/js/directives/fis.ui.rwd.directives.combined-min.js"></script>
+    <!--  ************************************************** -->
+    <!--  ****************  fis framework Services *********************** -->
+    <!--  ************************************************** -->
+    <script src="~/js/services/fis.ui.rwd.services.combined-min.js"></script>
+    <!--  ************************************************** -->
+    <!--  ****************  fis framework Filters ************************ -->
+    <!--  ************************************************** -->
+    <script src="~/js/filters/fis.ui.rwd.filter.translate.js"></script>
+    <!--  ************************************************** -->
+    <!--  ****************  Application ******************** -->
+    <!--  ************************************************** -->
+    <script src="~/app/app.js"></script>
+    
+    <script src="~/app/directives/cardHolderInfoDirective.js"></script>
+    <script src="~/app/directives/balanceTransferInfoDirective.js"></script>
+    <script src="~/app/directives/validationErrorsDirective.js"></script>
+
+    <script src="~/app/services/dataService.js"></script>
+    <script src="~/app/services/datagridService.js"></script>
+    <script src="~/app/services/pagerService.js"></script>
+
+    <script src="~/app/controllers/baseController.js"></script>
+    <script src="~/app/controllers/cardInfoController.js"></script>
+    <script src="~/app/controllers/bTransferController.js"></script>
+    <script src="~/app/controllers/inquiryController.js"></script>
+    <script src="~/app/controllers/selectTransactionController.js"></script>
+
+    @{
+        var env = @System.Configuration.ConfigurationManager.AppSettings.Get("Environment");
+        var ver = @System.Configuration.ConfigurationManager.AppSettings.Get("Version");
+    }
+    <script>
+        @functions{
+            public string TokenHeaderValue()
+            {
+                string cookieToken, formToken;
+                AntiForgery.GetTokens(null, out cookieToken, out formToken);
+                return cookieToken + ":" + formToken;                
+            }
+        }
+
+        var app = angular.module('bTransfer');
+        app.constant('appValues', {
+            env: '@env',
+            ver: '@ver',
+            requestToken : '@TokenHeaderValue()'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.drag
+{
+    opacity: 0.5;
+}
+
+.fis-rwd-tabs {
+  margin-top: 25px;
+}
+
+.fis-rwd-nav-tabs-container {
+  height: 35px;
+  overflow-1: hidden;
+}
+
+.fis-rwd-nav-tabs {
+  padding-left: 15px;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: 1px solid @fis-rwd-border;
+}
+
+.fis-rwd-nav-tabs > li {
+  position: relative;
+  display: block;
+  float: left;
+  background-color: #e2e2e2;
+  height: 35px;
+  margin-right: 7px;
+  line-height: 1.42857143;
+  font-size: @fis-rwd-font-size-normal;
+  font-weight: bold;
+  border: 1px solid @fis-rwd-border;
+  border-radius: 3px 3px 0 0;  
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Styles for the More menu on responsive Tabs */
+.fis-rwd-nav-tabs > li.fis-rwd-tabs-more-menu,
+.fis-rwd-nav-tabs > li.fis-rwd-tabs-more-menu:hover  {
+  width: 82px;	
+  background-color: @fis-rwd-workspace;
+  border-bottom: 1px solid @fis-rwd-border;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+.fis-rwd-nav-tabs > li:hover {
+  background-color: @fis-rwd-tabs_bkgd_color;
+  border-color: @fis-rwd-tabs_bkgd_color @fis-rwd-tabs_bkgd_color @fis-rwd-page_bkgd;
+}
+
+.fis-rwd-nav-tabs > li.active {
+  background: @fis-rwd-workspace;
+  cursor: default;
+  border: 1px solid @fis-rwd-page_bkgd;
+  border-bottom-color: transparent;
+}
+
+.fis-rwd-nav-tabs > li > span > a,
+.fis-rwd-nav-tabs > li.fis-rwd-tabs-more-menu > a.fis-rwd-tabs-text {
+  color: @fis-rwd-tabs-font-color;
+  text-decoration: none;
+  padding: 5px 15px 7px 15px;
+  display: inline-block;
+  float: left;
+}
+.fis-rwd-nav-tabs > li.fis-rwd-tabs-more-menu > a.fis-rwd-tabs-text {
+  border: 0px;
+}
+
+.fis-rwd-nav-tabs > li > span > a.fis-rwd-tabs-no-delete {
+  padding: 6px 15px;
+  display: block;
+  float: none;
+}
+
+.fis-rwd-nav-tabs > li > span > a.fis-rwd-tabs-close {
+  padding: 5px 10px 7px 10px;
+  float: right;
+}
+
+.fis-rwd-nav-tabs > li.active > span > a {
+  color: @fis-rwd-text_elements_heading;
+}
+
+.fis-rwd-nav-tabs > li.fis-rwd-tabs-more-menu > a.fis-rwd-tabs-text:focus {
+  color: @fis-rwd-text_elements_heading;
+  border: 0px;
+}
+
+.fis-rwd-nav-tabs:before,
+.fis-rwd-nav-tabs:after {
+  display: table;
+  content: " ";
+}
+
+.fis-rwd-nav-tabs:after {
+  clear: both;
+}
+
+/* Styles for the More menu on responsive Tabs */
+li.fis-rwd-tabs-more-menu .dropdown-menu > li {
+  min-width: 225px;
+  border-bottom: 1px solid @fis-rwd-border;
+  overflow:hidden; 
+  white-space: nowrap;
+}
+li.fis-rwd-tabs-more-menu .dropdown-menu > li:last-child {
+  border-bottom: 0px;
+}
+li.fis-rwd-tabs-more-menu .dropdown-menu > li > a {
+  padding: 0px 10px;
+}
+li.fis-rwd-tabs-more-menu .dropdown-menu > li > a.fis-rwd-tabs-more-menu-with-delete {
+  display: inline-block;	
+  width: 85%;	
+}
+li.fis-rwd-tabs-more-menu .dropdown-menu > li > a.fis-rwd-tabs-more-menu-close {
+  display: inline-block;	
+  border-left: 1px solid @fis-rwd-border;
+  cursor:pointer;
+}
+
+.fis-rwd-tabs-icon-close
+{
+	color: @fis-rwd-tabs-font-color;
+  	font-weight: bold;
+}

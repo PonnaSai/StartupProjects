@@ -1,0 +1,103 @@
+﻿<div class="col-xs-24" style="margin:0px 0px 10px 0px;" >
+    <form class="form-horizontal">
+        <fieldset ng-disabled='disabled'>
+            <legend>Balance Transfer {{number}}</legend>
+            <div class="row">
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Creditor Name:</label>
+                    <div class="col-md-11">
+                        <input name="txtCreditorName" id="txtCreditorName" type="text" 
+                            ng-model="transaction.payeeName" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Account Type:</label>
+                    <div class="col-md-4">
+                        <select class="form-control" id="txtAccountType" name="txtAccountType"
+                            ng-model="transaction.cardTypeID"
+                            ng-options ="cardType.key as cardType.value for cardType in cardTypes"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Address:</label>
+                    <div class="col-md-11">
+                        <input name="txtAddress" id="txtAddress" type="text" 
+                            ng-model="transaction.payeeAddress" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Account:</label>
+                    <div class="col-md-4">
+                        <input name="txtAccount" id="txtAccount" type="text" 
+                            ng-model="transaction.accountNoPayOff" class="form-control" allow-only-numbers maxlength="16"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Address 2:</label>
+                    <div class="col-md-11">
+                        <input name="txtAddress2" id="txtAddress2" type="text" 
+                            ng-model="transaction.payeeAddress2" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Verify Account:</label>
+                    <div class="col-md-4">
+                        <input name="txtVerifyAccount" id="txtVerifyAccount" type="text" 
+                            ng-model="verifyAccount" class="form-control" allow-only-numbers maxlength="16"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">City:</label>
+                    <div class="col-md-3">
+                        <input name="txtCity" id="txtCity" type="text" 
+                            ng-model="transaction.payeeCity" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group-xs">
+                    <label class="col-md-2 control-label">State:</label>
+                    <div class="col-md-2">
+                        <select class="form-control" id="txtState" name="txtState" 
+                            ng-model="transaction.payeeState" 
+                            ng-options="state.key as state.value for state in states" />
+                    </div>
+                </div>
+                <div class="form-group-xs">
+                    <label class="col-md-1 control-label">Zip:</label>
+                    <div class="col-md-3">
+                        <input name="txtZip" id="txtZip" type="text" 
+                            ng-model="transaction.payeeZip" class="form-control" allow-only-numbers maxlength="5"/>
+                    </div>
+                </div>
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Amount:</label>
+                    <div class="col-md-4">
+                        <input name="txtAmount" id="txtAmount" type="text" 
+                            ng-model="transaction.balance" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label">Phone:</label>
+                    <div class="col-md-3">
+                        <input name="txtPhone" id="txtPhone" type="text" 
+                            ng-model="transaction.payeePhone" class="form-control" allow-only-numbers maxlength="10"/>
+                    </div>
+                </div>
+                <div class="form-group-xs">
+                    <label class="col-md-2 control-label">Tran Desc:</label>
+                    <div class="col-md-13">
+                        <input name="txtTransferDesc" id="Text2" type="text" 
+                            ng-model="transaction.tranDesc" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

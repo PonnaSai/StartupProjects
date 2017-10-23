@@ -1,0 +1,10 @@
+<ul class="uib-datepicker-popup dropdown-menu" dropdown-nested ng-if="isOpen" style="display: block" ng-style="{top: position.top+'px', left: position.left+'px'}" ng-keydown="keydown($event)" ng-click="$event.stopPropagation()">
+	<li ng-transclude></li>
+	<li ng-if="showButtonBar" style="padding:10px 9px 2px" class="uib-button-bar">
+		<span class="btn-group pull-left">
+			<button type="button" class="btn btn-sm btn-info fis-rwd-calendar-btn-info" ng-click="select('today')" ng-disabled="isDisabled('today')">{{ getText('current')|translate }}</button>
+			<button type="button" class="btn btn-sm fis-rwd-calendar-btn-danger" ng-click="select(null)">{{ getText('clear')|translate }}</button>
+		</span>
+		<button type="button" class="btn btn-sm fis-rwd-calendar-btn-success pull-right" ng-click="close()">{{ getText('close')|translate }}</button>
+	</li>
+</ul>

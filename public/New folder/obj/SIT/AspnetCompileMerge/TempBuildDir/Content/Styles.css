@@ -1,0 +1,195 @@
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    font-weight: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    word-spacing: normal
+}
+
+h1, h2, h3, h4, h5, th, thead, tfoot {
+    color: #003366;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+        
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+        
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.58em;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+        
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.33em;
+    font-weight: 500;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+        
+h5, dt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+        
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+        
+tfoot, thead {
+    font-size: 1em;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+        
+th {
+    vertical-align: baseline;
+    font-size: 1em;
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+A:link {
+    text-decoration: none;
+}
+        
+A:visited {
+    text-decoration: none;
+}
+        
+A:active {
+    text-decoration: none;
+}
+        
+A:hover {
+    text-decoration: underline;
+}
+    
+blockquote, pre    {
+    font-family: Courier New, monospace;
+}
+
+ul li {
+    list-style-type: square;
+}
+
+ul li li {
+    list-style-type: disc;
+}
+
+ul li li li    {
+    list-style-type: circle;
+}
+    
+ul li {
+    list-style-type: decimal;
+}
+
+ol ol li {
+    list-style-type: lower-alpha;
+}
+
+ol ol ol li    {
+    list-style-type: lower-roman;
+}
+
+A.Header:link {    
+    text-decoration: none;
+    color: #000000;
+}
+        
+A.Header:visited {    
+    text-decoration: none;
+    color: #000000;
+}
+        
+A.Header:active    {    
+    text-decoration: none;
+    color: #000000;
+}
+        
+A.Header:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.warning {                               /* used to designate a TEST site */
+    color: #8DC63F;                      /* FIS green */
+    font-weight: bold;
+    font-style: italic;
+    font-size: xx-large;
+    vertical-align: bottom;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+.lblMessage {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.lblInfoTitle {
+    color: #4F6F19;                      /* FIS dark green */
+    font-weight: bold;
+    font-size: small;
+}
+
+.lblTitle {
+    color: #4F6F19;                      /* FIS dark green */
+    font-weight: bold;
+    font-size: small;
+}
+
+.rblPost {
+    font-size: small;
+}
+
+#dgTrans input[type=submit] {            /* sizes buttons appropriately in the grid */
+    width: 46px;
+}

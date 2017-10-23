@@ -1,0 +1,50 @@
+/*!
+ * This is the FIS theme for drop down menus. 
+ */
+
+.fis-rwd-dropdown-menu .divider {
+	height: 1px;
+	margin: 5px 15px;
+	overflow: hidden;
+	background-color: #e5e5e5;
+}
+
+.fis-rwd-dropdown-menu {
+  padding: 0px;
+  background-color: #FFFFFF;
+  border: 1px solid #bbb;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .200);
+}
+
+.fis-rwd-dropdown-menu-float-right {
+  right:0;
+  left:auto;
+}
+
+.fis-rwd-dropdown-menu > li > a {
+	padding: 0px 15px;
+	line-height: 43px;
+	color: #333333;
+}
+
+.fis-rwd-dropdown-menu > li > a:hover,
+.fis-rwd-dropdown-menu > li > a:focus, 
+.fis-rwd-dropdown-menu > li > a.active 
+{
+	color: @fis-rwd-colour-primary;
+	font-weight: @fis-rwd-dropdwon-menu-font-weight;
+	background-color: @fis-rwd-dropdwon-menu-background-highlight;
+}
+
+.fis-rwd-dropdown-menu > li > a.active {
+	text-decoration: underline;
+}
+
+@media (max-width: @fis-rwd-screen-xs-max) {
+
+	/* Added specifically for the Nav Bar off-canvas view to hide the dividers */
+	.navbar-nav>li .fis-rwd-dropdown-menu .divider {
+		display:none;
+	}
+}
+

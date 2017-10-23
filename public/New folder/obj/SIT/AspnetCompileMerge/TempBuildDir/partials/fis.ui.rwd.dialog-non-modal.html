@@ -1,0 +1,8 @@
+	
+	<div tabindex="-1" role="dialog" 
+		class="modal fis-rwd-modal non-modal fis-rwd-non-modal modal-dialog fis-rwd-modal-dialog non-modal-dialog fis-rwd-non-modal-dialog"
+		ng-class="{in: animate, 'modal-sm': size == 'sm', 'modal-lg': size == 'lg'}"
+		ng-style="{'z-index': 1050 + index*10, display: 'block'}"
+		ng-click="close($event)">
+			<div class="modal-content fis-rwd-modal-content" uib-modal-transclude></div>
+	</div>

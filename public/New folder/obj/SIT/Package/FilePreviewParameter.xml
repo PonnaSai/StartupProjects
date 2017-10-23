@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/BalanceTransfer" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Code\\BT_Legacy\\Development\\Source\\MVCUpgrade\\BalanceTransfer\\BalanceTransfer\\obj\\SIT\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Code\\BT_Legacy\\Development\\Source\\MVCUpgrade\\BalanceTransfer\\BalanceTransfer\\obj\\SIT\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

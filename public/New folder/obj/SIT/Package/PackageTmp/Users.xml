@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <UserId>P42598</UserId>
+    <SecurityToken>[B:lHTUQ2cALCQi1h22Z+xC4w==][M:OY1QbbHBbl2ZeLcMdgNAYg==][S:lHTUQ2cALCSembptlIcsYQ==]</SecurityToken>
+    <LastLogin>2017-03-21T14:06:34.8315871-04:00</LastLogin>
+    <CurrentLogin>0001-01-01T00:00:00</CurrentLogin>
+    <Active>false</Active>
+  </User>
+  <User>
+    <UserId>P44297</UserId>
+    <SecurityToken>[B:FmujkBcsaNutwOev2RVxSQ==][M:sHVEiBQ+f1a2IxNPSMp+8A==][S:FmujkBcsaNvQZbGUsTEe3A==]</SecurityToken>
+    <LastLogin>2017-09-26T11:52:25.1188516-04:00</LastLogin>
+    <CurrentLogin>2017-09-26T14:56:40.1436088-04:00</CurrentLogin>
+    <Active>true</Active>
+  </User>
+</Users>

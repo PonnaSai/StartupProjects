@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+	<div class="panel-heading  fis-rwd-accordion-panel-heading">
+		<h5 class="{{isOpen ? 'panel-title fis-rwd-accordion-panel-title':'panel-title fis-rwd-accordion-panel-title collapsed'}}"
+				ng-click="toggleOpen()" >
+			<a href class="accordion-toggle fis-rwd-accordion-toggle" uib-accordion-transclude="heading"><span ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
+		</h5>
+	</div>
+	<div class="panel-collapse fis-rwd-accordion-panel-collapse" uib-collapse="!isOpen">
+		<div class="panel-body fis-rwd-accordion-panel-body" ng-transclude></div>
+	</div>
+</div>
+

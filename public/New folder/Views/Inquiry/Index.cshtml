@@ -1,0 +1,154 @@
+﻿@model BalanceTransfer.Models.TransferFromAccount
+
+@{
+    ViewBag.Title = "Inquiry";
+    Layout = "~/Views/Shared/_FISLayout.cshtml";
+}
+
+<div ng-controller="inquiryController" ng-init="initController(@Newtonsoft.Json.JsonConvert.SerializeObject(Model, new Newtonsoft.Json.JsonSerializerSettings()
+                                                        {
+                                                            ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
+                                                        }))">
+    <validation-errors errors="errors" messages="messages" warnings="warnings"></validation-errors>
+    <div class="col-md-24">
+        <form class="form-horizontal" novalidate>
+            <div class="row">
+                <div class="form-group-xs">
+                    <label class="col-md-3 control-label" for="accountNumber">Account Number: </label>
+                    <div class="col-md-4">
+                        <input class="form-control" type="text" 
+                            ng-model="fromAccount.accountNoTransferTo" name="accountNumber" ng-disabled="true"/>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="btn-toolbar">
+                            <button id="btnReset" class="btn btn-xs fis-rwd-btn-primary" 
+                                ng-click="reset('Inquiry/Reset')">Reset</button>
+                            <button id="btnUpdate" class="btn btn-xs fis-rwd-btn-primary" 
+                                ng-click="update(false)" ng-disabled="canUpdate == false">Update</button>
+                            <button id="btnDelete" class="btn btn-xs fis-rwd-btn-primary" 
+                                ng-click="delete()" ng-disabled="canDelete == false">Delete</button>
+                            <button id="btnOverride" class="btn btn-xs fis-rwd-btn-primary" 
+                                ng-click="update(true)" ng-disabled="canOverride == false">Override</button>
+                            <button id="inquiry" class="btn btn-xs fis-rwd-btn-primary" ng-click="inquiry()">Inquiry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <card-holder-info from-account="fromAccount"></card-holder-info>
+            </div>
+            <div class="row">
+                <div class="col-xs-24" style="margin:5px 0px 10px 0px;">
+                    <fieldset>
+                        <legend>Balance Transfer</legend>
+                        <div class="row">
+                            <div class="form-group-xs">
+                                <div class="col-md-offset-4 col-md-4">
+                                    <label class="radio-inline">
+                                        <input class="fis-rwd-radio-checkbox-control-size" type="radio"
+                                            ng-model="fromAccount.postingIndicator" value="C">Cash</label>
+                                    <label class="radio-inline">
+                                        <input class="fis-rwd-radio-checkbox-control-size" type="radio"
+                                            ng-model="fromAccount.postingIndicator" value="P">Purchase</label>
+                                </div>
+                            </div>
+                            <div class="form-group-sm">
+                                <label class="col-md-3 control-label" ng-show="displayPromoCode">Promo Code:</label>
+                                <div class="col-md-3">
+                                    <input name="promoCode" id="promoCode"
+                                        ng-model="fromAccount.promoCode" class="form-control" ng-show="displayPromoCode"/>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <balance-transfer-info number=""
+                        data-card-types="cardTypes"
+                        data-states="states"
+                        data-transaction="transaction"
+                        data-disabled="canUpdate == false"
+                        required="true"
+                        data-copy-account ="true"></balance-transfer-info>
+            </div>
+            <div class="row">
+                <div class="col-xs-24" style="margin:0px 0px 10px 0px;">
+                    <div class="row">
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Entered Date:</label>
+                            <div class="col-md-4">
+                                <input name="enteredDate" id="enteredDate" type="text"
+                                    ng-model="transaction.transactionDate" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Auth Code:</label>
+                            <div class="col-md-4">
+                                <input name="authCode" id="authCode" type="text" 
+                                    ng-model="transaction.authCode" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Sent Date:</label>
+                            <div class="col-md-4">
+                                <input name="sentDate" id="sentDate" type="text" 
+                                    ng-model="transaction.processDate" class="form-control" disabled>
+                            </div>
+                        </div> 
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Resp Code:</label>
+                            <div class="col-md-4">
+                                <input name="approvalCode" id="approvalCode" type="text" 
+                                    ng-model="transaction.approvalCode" class="form-control" disabled>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="row">
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Payment Date:</label>
+                            <div class="col-md-4">
+                                <input name="paymentIssueDate" id="paymentIssueDate" type="text" 
+                                    ng-model="transaction.paymentIssueDate" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">User ID:</label>
+                            <div class="col-md-4">
+                                <input name="userId" id="userId" type="text" 
+                                    ng-model="transaction.userID" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Return Date:</label>
+                            <div class="col-md-4">
+                                <input name="returnDate" id="returnDate" type="text" 
+                                    ng-model="transaction.returnDate" class="form-control" disabled>
+                            </div>
+                        </div> 
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Tran ID:</label>
+                            <div class="col-md-4">
+                                <input name="tranId" id="tranId" type="text" 
+                                    ng-model="transaction.transactionID" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group-xs">
+                            <label class="col-md-3 control-label">Return Reason:</label>
+                            <div class="col-md-11">
+                                <input name="returnReason" id="returnReason" type="text" 
+                                    ng-model="transaction.returnReason" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

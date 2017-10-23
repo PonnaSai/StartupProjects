@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Code\BT_Legacy\Development\Source\MVCUpgrade\BalanceTransfer\BalanceTransfer\obj\SIT\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Code\BT_Legacy\Development\Source\MVCUpgrade\BalanceTransfer\BalanceTransfer\obj\SIT\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Code\BT_Legacy\Development\Source\MVCUpgrade\BalanceTransfer\BalanceTransfer\obj\SIT\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
