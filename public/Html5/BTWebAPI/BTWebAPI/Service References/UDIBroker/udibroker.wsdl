@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://fis.it.udi/UDIBroker" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://fis.it.udi/UDIBroker" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://fis.it.udi/UDIBroker">
+      <s:element name="ProcessByAcct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transaction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessByAcctResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessByAcctResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessByBin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transaction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessByBinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessByBinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginMulti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Credentials" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginMultiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginMultiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LookupInfoByAccountNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LookupInfoByAccountNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LookupInfoByAccountNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecurityToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Criteria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Criteria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameSearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HealthCheck">
+        <s:complexType />
+      </s:element>
+      <s:element name="HealthCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HealthCheckResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DirectToPlatform">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Transaction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SysCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DirectToPlatformResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DirectToPlatformResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BrokeredToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Transaction" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BrokeredTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BrokeredTokenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessByCorp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transaction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CorpId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessByCorpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessByCorpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessByAcctSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessByAcct" />
+  </wsdl:message>
+  <wsdl:message name="ProcessByAcctSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessByAcctResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessByBinSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessByBin" />
+  </wsdl:message>
+  <wsdl:message name="ProcessByBinSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessByBinResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginMultiSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginMulti" />
+  </wsdl:message>
+  <wsdl:message name="LoginMultiSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="LookupInfoByAccountNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:LookupInfoByAccountNumber" />
+  </wsdl:message>
+  <wsdl:message name="LookupInfoByAccountNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:LookupInfoByAccountNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapIn">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:NameSearch" />
+  </wsdl:message>
+  <wsdl:message name="NameSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:NameSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="HealthCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:HealthCheck" />
+  </wsdl:message>
+  <wsdl:message name="HealthCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:HealthCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="DirectToPlatformSoapIn">
+    <wsdl:part name="parameters" element="tns:DirectToPlatform" />
+  </wsdl:message>
+  <wsdl:message name="DirectToPlatformSoapOut">
+    <wsdl:part name="parameters" element="tns:DirectToPlatformResponse" />
+  </wsdl:message>
+  <wsdl:message name="BrokeredTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:BrokeredToken" />
+  </wsdl:message>
+  <wsdl:message name="BrokeredTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:BrokeredTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessByCorpSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessByCorp" />
+  </wsdl:message>
+  <wsdl:message name="ProcessByCorpSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessByCorpResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsBinRoutingSoap">
+    <wsdl:operation name="ProcessByAcct">
+      <wsdl:input message="tns:ProcessByAcctSoapIn" />
+      <wsdl:output message="tns:ProcessByAcctSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessByBin">
+      <wsdl:input message="tns:ProcessByBinSoapIn" />
+      <wsdl:output message="tns:ProcessByBinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginMulti">
+      <wsdl:input message="tns:LoginMultiSoapIn" />
+      <wsdl:output message="tns:LoginMultiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LookupInfoByAccountNumber">
+      <wsdl:input message="tns:LookupInfoByAccountNumberSoapIn" />
+      <wsdl:output message="tns:LookupInfoByAccountNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchSoapIn" />
+      <wsdl:output message="tns:SearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <wsdl:input message="tns:NameSearchSoapIn" />
+      <wsdl:output message="tns:NameSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheck">
+      <wsdl:input message="tns:HealthCheckSoapIn" />
+      <wsdl:output message="tns:HealthCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectToPlatform">
+      <wsdl:input message="tns:DirectToPlatformSoapIn" />
+      <wsdl:output message="tns:DirectToPlatformSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BrokeredToken">
+      <wsdl:input message="tns:BrokeredTokenSoapIn" />
+      <wsdl:output message="tns:BrokeredTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessByCorp">
+      <wsdl:input message="tns:ProcessByCorpSoapIn" />
+      <wsdl:output message="tns:ProcessByCorpSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsBinRoutingSoap" type="tns:wsBinRoutingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessByAcct">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/ProcessByAcct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessByBin">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/ProcessByBin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginMulti">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/LoginMulti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LookupInfoByAccountNumber">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/LookupInfoByAccountNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/NameSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheck">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/HealthCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectToPlatform">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/DirectToPlatform" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BrokeredToken">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/BrokeredToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessByCorp">
+      <soap:operation soapAction="http://fis.it.udi/UDIBroker/ProcessByCorp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsBinRoutingSoap12" type="tns:wsBinRoutingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessByAcct">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/ProcessByAcct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessByBin">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/ProcessByBin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginMulti">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/LoginMulti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LookupInfoByAccountNumber">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/LookupInfoByAccountNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/Search" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameSearch">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/NameSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheck">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/HealthCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectToPlatform">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/DirectToPlatform" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BrokeredToken">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/BrokeredToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessByCorp">
+      <soap12:operation soapAction="http://fis.it.udi/UDIBroker/ProcessByCorp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsBinRouting">
+    <wsdl:port name="wsBinRoutingSoap" binding="tns:wsBinRoutingSoap">
+      <soap:address location="http://vwcapedsap01ud.fisdev.local:84/udibroker.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsBinRoutingSoap12" binding="tns:wsBinRoutingSoap12">
+      <soap12:address location="http://vwcapedsap01ud.fisdev.local:84/udibroker.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
