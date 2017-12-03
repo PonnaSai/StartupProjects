@@ -1,0 +1,82 @@
+﻿@model IEnumerable<DispatchApp.Models.BusinessModel>
+           @using DispatchApp.Models
+
+@{
+    ViewBag.Title = "Dimensions";
+    var val = Json.Encode(Model);
+}
+
+<form id="registerSubmit">
+
+
+    <script src="~/Scripts/jquery-3.1.0.js"></script>
+    <table class="table">
+        <tr>
+            <th>@Html.Label("Description")</th>
+            <th>@Html.Label("Length")</th>
+            <th>@Html.Label("Width")</th>
+            <th>@Html.Label("Height")</th>
+            <th>@Html.Label("Weight")</th>
+            <th>@Html.Label("IsFragile")</th>
+        </tr>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.TextBox(item.Name, item.Name)
+                </td>
+                <td>
+                    @Html.TextBox("Length",item.Length)
+                </td>
+                <td>
+                    @Html.TextBox("Width",item.Width)
+                </td>
+
+                <td>
+                    @Html.TextBox("Height",item.Height)
+                </td>
+                <td>
+                    @Html.TextBox("Weight",item.Weight)
+                </td>
+                @*<td>
+                        @Html.DropDownList(item.IsFragile)
+                    </td>*@
+            </tr>
+
+        }
+
+        <tr>
+            <td>
+                <input type="button" value="Submit" onclick="submission()" />
+            </td>
+        </tr>
+
+    </table>
+    <script>
+
+        function submission() {
+
+            // var check = $('#registerSubmit').serialize();
+            var check = @Html.Raw(Json.Encode(Model))
+              //  alert(val);
+
+            $.ajax({
+                type: "Post",
+                url: " @(Url.Action("Submission", "Dispatch"))",
+                 data: '{ObjCol: ' + JSON.stringify(check) + '}',
+               // data : '{ObjCol: ' + JSON.stringify(check) + '}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $('.text').text(JSON.stringify(data));
+                },
+                error: function (data) {
+                    alert(data);
+                }
+            });
+        }
+    </script>
+</form>
